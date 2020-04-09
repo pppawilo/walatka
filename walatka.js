@@ -1,29 +1,52 @@
 function checkPermission() {
+    var accelerationX = 0;
+    var accelerationY = 0;
+    var accelerationZ = 0;
+
+    var startTime = 0;
+    document.getElementById("demo").innerHTML = d.getTime();
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         DeviceMotionEvent.requestPermission()
             .then(response => {
                 if (response == 'granted') {
-                    window.addEventListener('devicemotion', function (event) {
-                        motionHandler(event);
-                    }, false);
+                    startTime = Date.now();
+                    motionEvent();
                 }
             })
             .catch(console.error)
 
     } else {
-        window.addEventListener('devicemotion', function (event) {
-            motionHandler(event);
-        }, false);
+        motionEvent();
 
 
     }
 
+
+    function motionEvent() {
+        window.addEventListener('devicemotion', function (event) {
+            if (Date.now() < startTime + 3000) {
+                motionHandler(event);
+            } else {
+                document.getElementById("accelerationXfinal").innerHTML = "x " + accelerationX;
+                document.getElementById("accelerationYfinal").innerHTML = "y " + accelerationY;
+                document.getElementById("accelerationZfinal").innerHTML = "z " + accelerationZ;
+            }
+        }, false);
+    }
+
     function motionHandler(event) {
-        document.getElementById("accelerationX").innerHTML = "x " + event.accelerationIncludingGravity.x;
-        document.getElementById("accelerationY").innerHTML = "y " + event.accelerationIncludingGravity.y;
-        document.getElementById("accelerationZ").innerHTML = "z " + event.accelerationIncludingGravity.z;
-        document.getElementById("accelerationX2").innerHTML = "x2 " + event.acceleration.x;
-        document.getElementById("accelerationY2").innerHTML = "y2 " + event.acceleration.y;
-        document.getElementById("accelerationZ2").innerHTML = "z2 " + event.acceleration.z;
+
+        if (event.acceleration.x > accelerationX) {
+            accelerationX = event.acceleration.x;
+        }
+        if (event.acceleration.y > accelerationY) {
+            accelerationY = event.acceleration.y;
+        }
+        if (event.acceleration.z > accelerationZ) {
+            accelerationZ = event.acceleration.Z;
+        }
+        document.getElementById("accelerationX").innerHTML = "x " + event.acceleration.x;
+        document.getElementById("accelerationY").innerHTML = "y " + event.acceleration.y;
+        document.getElementById("accelerationZ").innerHTML = "z " + event.acceleration.z;
     }
 }
