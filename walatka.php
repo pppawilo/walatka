@@ -25,12 +25,6 @@
             </div>
 
 
-            <p id="accelerationX">X</p>
-            <p id="accelerationY">Y</p>
-            <p id="accelerationZ">Z</p>
-            <p id="accelerationXfinal">X final</p>
-            <p id="accelerationYfinal">Y final</p>
-            <p id="accelerationZfinal">Z final</p>
             <h3>Ostatnie wyniki:</h3>
             <ul>
                 <?php
@@ -41,6 +35,15 @@
                 }
                 ?>
             </ul>
+
+            <div id=engine>
+                <p id="accelerationX">X</p>
+                <p id="accelerationY">Y</p>
+                <p id="accelerationZ">Z</p>
+                <p id="accelerationXfinal">X final</p>
+                <p id="accelerationYfinal">Y final</p>
+                <p id="accelerationZfinal">Z final</p>
+            </div>
 
 
 

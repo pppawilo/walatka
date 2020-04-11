@@ -10,7 +10,7 @@
   animation-iteration-count: infinite;
 }
 
-#scoreP {
+#scoreP, #engine {
   display: none;
 }
 

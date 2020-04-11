@@ -76,8 +76,8 @@ function formSubmit() {
         name = document.getElementById("formName").value;
         document.cookie = name;
     }
+    var line = name + " : " + score.value;
 
-
-    window.location.href = "file.php?line=" + name + " : " + score;
+    window.location.href = "file.php?line=" + line;
 }
 
