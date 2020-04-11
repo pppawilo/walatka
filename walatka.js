@@ -31,6 +31,7 @@ function checkPermission() {
 
 
     function motionEventListener() {
+        document.getElementById("startButton").style.display = "none";
         startTime = Date.now();
         document.getElementById("accelerationXfinal").innerHTML = "x ";
         document.getElementById("accelerationYfinal").innerHTML = "y ";
