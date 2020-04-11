@@ -17,12 +17,21 @@
     <p id="accelerationXfinal">X final</p>
     <p id="accelerationYfinal">Y final</p>
     <p id="accelerationZfinal">Z final</p>
+    <p id="name"></p>
+    <p id="name2"></p>
+
+
 
 
     <button type="button" onclick="checkPermission()">Try it</button>
+    <p id="scoreP" style="display: none;"">
+        <form id=" form">
+        Imię: <input type="text" id="formName" value=""><br>
+        Wynik: <input id="score" type="number" value="0" readonly>
 
-
-
+        <input type="button" onclick="formSubmit()" value="Zapisz wynik!">
+        </form>
+    </p>
     <script src="walatka.js"></script>
 </body>
 

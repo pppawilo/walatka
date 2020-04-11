@@ -1,3 +1,11 @@
+function checkCookie() {
+    var name = document.cookie;
+    if (name != "") {
+        name = name.substring(5);
+        document.getElementById("formName").value = name;
+    }
+
+}
 function checkPermission() {
     var accelerationX = 0;
     var accelerationY = 0;
@@ -36,6 +44,10 @@ function checkPermission() {
                 document.getElementById("accelerationXfinal").innerHTML = "x " + accelerationX;
                 document.getElementById("accelerationYfinal").innerHTML = "y " + accelerationY;
                 document.getElementById("accelerationZfinal").innerHTML = "z " + accelerationZ;
+                var score = Math.round(accelerationX + accelerationY + accelerationZ);
+                document.getElementById("scoreP").style.display = "block";
+                checkCookie();
+                document.getElementById("score").value = score;
             }
         }, false);
     }
@@ -55,4 +67,8 @@ function checkPermission() {
         document.getElementById("accelerationY").innerHTML = "y " + event.acceleration.y;
         document.getElementById("accelerationZ").innerHTML = "z " + event.acceleration.z;
     }
+}
+
+function formSubmit() {
+    alert("form submit");
 }
