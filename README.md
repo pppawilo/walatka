@@ -5,8 +5,9 @@
 ![alt text](start_screen.gif)
 
 Very simple game for Easter.
+[Live demo](https://www.pawilojc.pl/walatka "Walatka (Easter game)")
 
-HTML + Javascript + PHP
+Javascript + PHP
 
 
 ### Zasady
