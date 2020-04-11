@@ -14,6 +14,22 @@
   display: none;
 }
 
+#playButton {
+  display: none;
+  background-color: lime;
+  animation-name: play;
+  animation-duration: 4s;
+}
+
+@keyframes play {
+  from {
+    background-color: lime;
+  }
+  to {
+    background-color: lightgreen;
+  }
+}
+
 .button {
   display: block;
   width: 100%;

@@ -32,6 +32,7 @@ function checkPermission() {
 
     function motionEventListener() {
         document.getElementById("startButton").style.display = "none";
+        document.getElementById("playButton").style.display = "block";
         startTime = Date.now();
         document.getElementById("accelerationXfinal").innerHTML = "x ";
         document.getElementById("accelerationYfinal").innerHTML = "y ";
@@ -46,6 +47,7 @@ function checkPermission() {
                 document.getElementById("accelerationYfinal").innerHTML = "y " + accelerationY;
                 document.getElementById("accelerationZfinal").innerHTML = "z " + accelerationZ;
                 var score = Math.round(accelerationX + accelerationY + accelerationZ);
+                document.getElementById("playButton").style.display = "none";
                 document.getElementById("scoreP").style.display = "block";
                 checkCookie();
                 document.getElementById("score").value = score;

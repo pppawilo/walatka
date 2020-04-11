@@ -9,6 +9,7 @@
 <body>
     <div id="all">
         <h3>Walatka</h1>
+            <button type="button" class="button" id="playButton">Atak!</button>
             <button type="button" onclick="checkPermission()" class="button" id="startButton">Start</button>
             <div id="scoreP">
                 <form id=" form">
