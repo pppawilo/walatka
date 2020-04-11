@@ -31,6 +31,16 @@
             <p id="accelerationXfinal">X final</p>
             <p id="accelerationYfinal">Y final</p>
             <p id="accelerationZfinal">Z final</p>
+            <h3>Ostatnie wyniki:</h3>
+            <ul>
+                <?php
+                $data = array_slice(file('wyniki.txt'), -10);
+
+                foreach ($data as $line) {
+                    echo "<li>" . $line . "</li>";
+                }
+                ?>
+            </ul>
 
 
 

@@ -77,4 +77,7 @@ function formSubmit() {
         document.cookie = name;
     }
 
+
+    window.location.href = "file.php?line=" + name + " : " + score;
 }
+
