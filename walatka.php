@@ -9,6 +9,8 @@
 <body>
     <div id="all">
         <h3>Walatka</h1>
+
+
             <button type="button" class="button" id="playButton">Atak!</button>
             <button type="button" onclick="checkPermission()" class="button" id="startButton">Start</button>
             <div id="scoreP">
@@ -36,6 +38,16 @@
                 }
                 ?>
             </ul>
+
+
+            <p>
+                <h4>Wyjaśnienie</h4>
+                W czasie świątecznych biesiad do zabaw wykorzystywano pisanki i kraszanki.
+                Najczęściej były to gry zwane walatką lub wybitką, czy też zabawą na wybitki.
+                Polegała ona na toczeniu po stole pisanek albo stukanie się pisankami trzymanymi w ręku.
+                Wygrywał ten, czyja pisanka się nie rozbiła.
+            </p>
+            <p>Po naciśnięciu guzika <em style="color: lime"> Start</em>, złap mocno telefon i zamachnij się jak jajkiem!</p>
 
             <div id=engine>
                 <p id="accelerationX">X</p>

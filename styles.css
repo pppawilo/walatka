@@ -16,17 +16,17 @@
 
 #playButton {
   display: none;
-  background-color: lime;
+  background-color: orangered;
   animation-name: play;
   animation-duration: 4s;
 }
 
 @keyframes play {
   from {
-    background-color: lime;
+    background-color: orangered;
   }
   to {
-    background-color: lightgreen;
+    background-color: whitesmoke;
   }
 }
 
