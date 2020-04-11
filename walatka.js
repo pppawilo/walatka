@@ -1,7 +1,7 @@
 function checkCookie() {
     var name = document.cookie;
     if (name != "") {
-        name = name.substring(5);
+        //name = name.substring(5);
         document.getElementById("formName").value = name;
     }
 
@@ -55,13 +55,13 @@ function checkPermission() {
     function motionHandler(event) {
 
         if (Math.abs(event.acceleration.x) > accelerationX) {
-            accelerationX = event.acceleration.x;
+            accelerationX = Math.abs(event.acceleration.x);
         }
         if (Math.abs(event.acceleration.y) > accelerationY) {
-            accelerationY = event.acceleration.y;
+            accelerationY = Math.abs(event.acceleration.y);
         }
         if (Math.abs(event.acceleration.z) > accelerationZ) {
-            accelerationZ = event.acceleration.z;
+            accelerationZ = Math.abs(event.acceleration.z);
         }
         document.getElementById("accelerationX").innerHTML = "x " + event.acceleration.x;
         document.getElementById("accelerationY").innerHTML = "y " + event.acceleration.y;
@@ -70,5 +70,10 @@ function checkPermission() {
 }
 
 function formSubmit() {
-    alert("form submit");
+    var name = document.cookie;
+    if (document.cookie.indexOf("name") == -1) {
+        name = document.getElementById("formName").value;
+        document.cookie = name;
+    }
+
 }

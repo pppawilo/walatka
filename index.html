@@ -3,35 +3,40 @@
 
 <head>
     <title>Walatka (na wybitki) - gra Wielkanocna</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div id="all">
+        <h1>Walatka</h1>
+        <div id="scoreP">
+            <form id=" form">
+                Imię: <input id="formName" type="text" value=""><br>
+                Wynik: <input id="score" type="number" value="0" readonly>
 
-    <h1>Walatka</h1>
+                <input type="button" onclick="formSubmit()" value="Zapisz wynik!">
+            </form>
+        </div>
+
+        <div id="egg">
+
+            &#129370;
+        </div>
+
+
+        <p id="accelerationX">X</p>
+        <p id="accelerationY">Y</p>
+        <p id="accelerationZ">Z</p>
+        <p id="accelerationXfinal">X final</p>
+        <p id="accelerationYfinal">Y final</p>
+        <p id="accelerationZfinal">Z final</p>
 
 
 
-    <p id="accelerationX">X</p>
-    <p id="accelerationY">Y</p>
-    <p id="accelerationZ">Z</p>
-    <p id="accelerationXfinal">X final</p>
-    <p id="accelerationYfinal">Y final</p>
-    <p id="accelerationZfinal">Z final</p>
-    <p id="name"></p>
-    <p id="name2"></p>
 
 
-
-
-    <button type="button" onclick="checkPermission()">Try it</button>
-    <p id="scoreP" style="display: none;"">
-        <form id=" form">
-        Imię: <input type="text" id="formName" value=""><br>
-        Wynik: <input id="score" type="number" value="0" readonly>
-
-        <input type="button" onclick="formSubmit()" value="Zapisz wynik!">
-        </form>
-    </p>
+        <button type="button" onclick="checkPermission()">Try it</button>
+    </div>
     <script src="walatka.js"></script>
 </body>
 
